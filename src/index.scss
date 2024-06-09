@@ -1,0 +1,9 @@
+$font-path: "~node_modules/@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/fonts/src/assets/fonts/" !default;
+@import '@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/fonts/src/fonts.css';
+@import '@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/digi-arbetsformedlingen.css';
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

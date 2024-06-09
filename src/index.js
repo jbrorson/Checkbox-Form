@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './index.scss';
+import { DigiTypography } from '@digi/arbetsformedlingen-react';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <DigiTypography>
+      <App />
+    </DigiTypography>
   </React.StrictMode>
 );
 
