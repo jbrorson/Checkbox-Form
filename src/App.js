@@ -30,13 +30,19 @@ const App = () => {
         setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
     };
 
+    const handleEditTask = (id, newTitle) => {
+        setTasks(tasks.map(task => 
+            task.id === id ? { ...task, title: newTitle } : task
+        ));
+    };
+
     return (
         <div>
             <Header />
             <DigiLayoutContainer afVerticalPadding>
                 <Content />
                 <NewTaskForm onAddTask={handleAddTask} />
-                <TaskList tasks={tasks} onToggleComplete={handleToggleComplete} onDelete={handleDeleteTask} />
+                <TaskList tasks={tasks} onToggleComplete={handleToggleComplete} onDeleteTask={handleDeleteTask} onEditTask={handleEditTask} />
             </DigiLayoutContainer>
             <Footer />
         </div>
