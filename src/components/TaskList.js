@@ -1,7 +1,7 @@
 import React from 'react';
 import Task from './Task';
 
-const TaskList = ({ tasks, onToggleComplete, onDelete }) => {
+const TaskList = ({ tasks, onToggleComplete, onDeleteTask, onEditTask }) => {
     return (
         <div>
             {tasks.map(task => (
@@ -9,11 +9,12 @@ const TaskList = ({ tasks, onToggleComplete, onDelete }) => {
                     key={task.id}
                     task={task}
                     onToggleComplete={onToggleComplete}
-                    onDelete={onDelete}
+                    onDelete={onDeleteTask}
+                    onEdit={onEditTask}
                 />
             ))}
         </div>
     );
-}
+};
 
 export default TaskList;
