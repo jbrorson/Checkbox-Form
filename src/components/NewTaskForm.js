@@ -18,16 +18,16 @@ const NewTaskForm = ({ onAddTask }) => {
 
     return (
         <DigiLayoutContainer afNoGutter afVerticalPadding>
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={newTask}
-                onChange={(e) => setNewTask(e.target.value)}
-                placeholder="Lägg till ny uppgift"
-            />
-            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-            <DigiButton afType="submit">Lägg till uppgift</DigiButton>
-        </form>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={newTask}
+                    onChange={(e) => setNewTask(e.target.value)}
+                    placeholder="Lägg till ny uppgift"
+                />
+                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                <DigiButton afType="submit">Lägg till uppgift</DigiButton>
+            </form>
         </DigiLayoutContainer>
     );
 }

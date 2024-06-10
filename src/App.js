@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import NewTaskForm from './components/NewTaskForm';
 import TaskList from './components/TaskList';
 import Content from './components/Content';
+import Form from './components/Form';
 
 const App = () => {
     const [tasks, setTasks] = useState(() => {
@@ -41,6 +42,7 @@ const App = () => {
             <Header />
             <DigiLayoutContainer afVerticalPadding>
                 <Content />
+                <Form />
                 <NewTaskForm onAddTask={handleAddTask} />
                 <TaskList tasks={tasks} onToggleComplete={handleToggleComplete} onDeleteTask={handleDeleteTask} onEditTask={handleEditTask} />
             </DigiLayoutContainer>

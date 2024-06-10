@@ -12,18 +12,18 @@ const Task = ({ task, onToggleComplete, onDelete, onEdit }) => {
 
     return (
         <div>
-            <div>
+            <div style={{marginBottom: '12px'}}>
                 <DigiFormCheckbox
                     afLabel={task.title}
                     type="checkbox"
                     checked={task.completed}
                     onChange={() => onToggleComplete(task.id)}
                 />
-                <DigiButton afVariation={ButtonVariation.SECONDARY} onClick={handleEditClick}>
-                    Redigera
-                </DigiButton>
-                <DigiButton onClick={() => onDelete(task.id)}>Ta bort</DigiButton>
             </div>
+            <DigiButton afVariation={ButtonVariation.SECONDARY} onAfOnClick={handleEditClick}>
+                Redigera
+            </DigiButton>
+            <DigiButton onAfOnClick={() => onDelete(task.id)}>Ta bort</DigiButton>
         </div>
     );
 };
