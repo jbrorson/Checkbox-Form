@@ -1,5 +1,5 @@
 import { DigiLayoutContainer, DigiTypographyHeadingJumbo, DigiTypographyPreamble } from "@digi/arbetsformedlingen-react";
-import { TypographyHeadingJumboLevel } from '@digi/arbetsformedlingen';
+import { TypographyHeadingJumboLevel } from "@digi/arbetsformedlingen";
 
 export default function Content() {
     return (
