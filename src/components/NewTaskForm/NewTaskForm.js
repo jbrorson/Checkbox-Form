@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { DigiButton, DigiLayoutContainer } from "@digi/arbetsformedlingen-react";
+import { DigiButton, DigiLayoutContainer, DigiTypography } from "@digi/arbetsformedlingen-react";
+import { TypographyVariation } from "@digi/arbetsformedlingen";
 import "./NewTaskForm.scss";
 
 const NewTaskForm = ({ onAddTask }) => {
@@ -19,8 +20,10 @@ const NewTaskForm = ({ onAddTask }) => {
 
     return (
         <DigiLayoutContainer afNoGutter afVerticalPadding>
-            <h2>Det går även att lägga till egna uppgifter</h2>
-            <p>Detta är valfritt</p>
+            <DigiTypography afVariation={TypographyVariation.SMALL}>
+                <h2>Det går även att lägga till egna uppgifter</h2>
+                <p>Detta är valfritt</p>
+            </DigiTypography>
             <form onSubmit={handleSubmit}>
                 <div className="form">
                     <input
